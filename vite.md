@@ -572,7 +572,7 @@ It is common in JavaScript applications to [create aliases](#aliases) to regular
  */
 public function boot(): void
 {
-    Vite::macro('image', fn (string $asset) => $this->asset("resources/images/{$asset}"));
+    Vite::macro('image', fn (string $asset) => Vite::asset("resources/images/{$asset}"));
 }
 ```
 
